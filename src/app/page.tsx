@@ -22,7 +22,18 @@ export default function Home() {
   return <main className={styles.page}>
     <nav className={styles.nav} aria-label="Primary navigation">
       <a className={styles.brand} href="#top" aria-label="Serendib Roads home"><span className={styles.mark}>S</span><span>Serendib<br />Roads</span></a>
-      <div className={styles.navLinks}><Link href="/driver-services">Driver services</Link><Link href="/airport-transfers">Airport transfers</Link><Link href="/vehicles">Vehicles</Link><Link href="/tours">Tours</Link><Link href="/reviews">Reviews</Link></div>
+      <div className={styles.navLinks}>
+        <div className={styles.driverMenu}>
+          <Link href="/driver-services">Driver services <span>⌄</span></Link>
+          <div className={styles.driverDropdown}>
+            <Link href="/driver-services/private-driver-service">Private Driver Sri Lanka</Link>
+            <Link href="/driver-services/car-with-driver-service">Car With Driver Sri Lanka</Link>
+            <Link href="/driver-services/van-driver-service">Van With Driver Sri Lanka</Link>
+            <Link href="/driver-services/chauffer-service">Chauffeur Service Sri Lanka</Link>
+          </div>
+        </div>
+        <Link href="/airport-transfers">Airport transfers</Link><Link href="/vehicles">Vehicles</Link><Link href="/tours">Tours</Link><Link href="/reviews">Reviews</Link>
+      </div>
       <a className={styles.navCta} href="#contact">Plan your trip <span>↗</span></a>
     </nav>
     <section className={styles.hero} id="top">
